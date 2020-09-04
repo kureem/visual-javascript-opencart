@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<project default="main" basedir=".">
+
+	
+
+ <target name="main" >
+ 	<echo message="calling the web services generation ant task: axis_bujava"/>
+	<delete dir="C:\xampp\storage\cache"></delete>
+ 	
+ 	
+ </target>
+	
+	<target name="package">
+		<copy file="src\\main\\resources\\META-INF\\resources\\webjars\\grapes\\1.0.0-SNAPSHOT\bundle.js"
+		 										tofile="C:\\xampp\\htdocs\\cart\\admin\\view\\javascript\\cart.js" verbose="true" />
+		 
+	</target>
+  
+</project>
