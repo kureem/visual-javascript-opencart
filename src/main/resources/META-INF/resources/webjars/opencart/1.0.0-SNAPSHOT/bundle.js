@@ -587,13 +587,13 @@ Form["__interfaces"] = ["framework.components.api.Renderable"];
             let type = this.field_.type;
             let name = this.field_.name;
             if (type === FormConfig.TEXT_TYPE) {
-                this.input = new input.JSStringInput(name);
+                this.input = new input.JSTextInput(name);
             }
             else if (type === FormConfig.CHECK_BOX_TYPE) {
                 this.input = new input.JSCheckBox(name);
             }
             else if (type === FormConfig.COLOR_TYPE) {
-                this.input = new input.JSStringInput(name);
+                this.input = new input.JSTextInput(name);
                 this.input.setAttribute("type", "color");
             }
             else if (type === FormConfig.DATE_TYPE) {
@@ -609,10 +609,10 @@ Form["__interfaces"] = ["framework.components.api.Renderable"];
                 this.input = new input.JSDateInput(name).setType(input.DateInputTypes.month);
             }
             else if (type === FormConfig.NUMBER_TYPE) {
-                this.input = new input.JSNumericInput(name);
+                this.input = new input.JSNumberInput(name);
             }
             else if (type === FormConfig.RANGE_TYPE) {
-                this.input = new input.JSNumericInput(name).setType(input.NumericInputTypes.range);
+                this.input = new input.JSNumberInput(name).setType(input.NumericInputTypes.range);
             }
             else if (type === FormConfig.SELECT_TYPE) {
                 this.input = new input.JSSelect(name);
@@ -628,7 +628,7 @@ Form["__interfaces"] = ["framework.components.api.Renderable"];
                 this.input = new CloudinaryInput(name);
             }
             else {
-                this.input = new input.JSStringInput(name);
+                this.input = new input.JSTextInput(name);
             }
             this.input.setRequired(this.field_.required);
             this.input.addClass("form-control");
